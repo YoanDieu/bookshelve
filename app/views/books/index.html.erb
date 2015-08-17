@@ -1,0 +1,43 @@
+<header>
+  <h1>Bibliothèque</h1>
+  <%= form_tag "/books", method: "post" do %>
+    <input type="text" name="title" placeholder="Titre" />
+    <input type="text" name="sub_title" placeholder="sous-titre" />
+    <input type="text" name="author" placeholder="Auteur"/>
+    <select name="category_id" placehorder="Catégories">
+      <% @categories.each do |category| %>
+        <option value="<%= category.id %>"> <%= category.name %> </option>
+      <%end%>
+    </select>
+    <p> Lu:<input type="checkbox" name="read"/></p>
+    <input type="submit" value="Ajouter un Livre"/>
+  <% end %>
+</header>
+
+<main>
+  <h3>Nombre de livre : <%= @nombreDeLivres %></h3>
+  <% if @nombreDeLivres > 0  %>
+    <ul>
+      <% @books.each do |book|%>
+        <ul class="book<%=book.id%>">
+          <%= form_tag "/books/#{book.id}", method: "delete" do %>
+            <input type="submit" value="x"/>
+          <% end %>
+          <div class="container">
+            <li class="booktitle"><%= book.title %></li>
+            <% if book.author %>
+            <li class="bookauthor"><%= book.author %></li>
+            <% end %>
+            <% if book.category %>
+              <li class="bookcategorie"><%= book.category.name %></li>
+            <% end %>
+            <li class="booklink"><a href="/books/<%= book.id %>"> Voir</a></li>
+
+          </div>
+      </ul>
+      <% end %>
+    </ul>
+  <% else %>
+    <p><strong>Désolé</strong> Aucun livre dans la bibliothèque pour l'instant</p>
+  <% end %>
+</main>

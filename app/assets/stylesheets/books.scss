@@ -1,0 +1,199 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("bookwall.jpg");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: cover;
+  background-attachment: fixed;
+
+
+  header {
+    display: block;
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    height: 60px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    box-shadow: -20px 20px 20px rgba(0,0,0,1);
+
+    h1 {
+      display: inline-block;
+      margin: 0;
+      margin-top: 10px;
+      margin-right: 40px;
+      vertical-align: top;
+    }
+
+    form {
+      display: inline-block;
+
+      input {
+        display: inline-block;
+      }
+
+      p {
+        display: inline-block;
+      }
+    }
+  }
+
+  main {
+    position: relative;
+    display: block;
+    width: 1000px;
+    padding: 15px;
+    padding-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 5px;
+
+    h3 {
+      color: white;
+
+    }
+
+    ul {
+      padding: 0;
+
+
+      ul{
+        display: inline-block;
+        width: 30%;
+        height: 350px;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-left: 1.50%;
+        margin-right: 1.30%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-image: url(bookcovereffect.jpg);
+        background-size: cover;
+        background-color: #660000;
+        list-style: none;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: inset 0px 0px 5px rgba(0,0,0,0.5);
+        border: 2px solid #290808;
+
+        form{
+          position: relative;
+          float: right;
+          margin-right: -15px;
+          margin-top: -15px;
+          z-index: 50;
+
+          p {
+            margin: 5px;
+          }
+
+          input {
+            padding: 0px 3px;
+            font-weight: bold;
+            color: darkgray;
+            box-shadow: 0px 0px 1px rgba(0,0,0,0.5)
+          }
+        }
+
+        .container {
+          position: relative;
+          border: 4px groove rgba(255,255,255,0.05);
+          border-left: 2px dashed #CC9900;
+          padding-left: 20px;
+          padding-top: 30px;
+          box-sizing: border-box;
+          box-shadow: -3px 0px 0px rgba(0,0,0,0.2);
+          height: 100%;
+          text-align: center;
+
+          .booktitle {
+            position: relative;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffDD44;
+            margin-bottom: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 97%;
+            height: 50px;
+          }
+
+          .bookauthor {
+            position: relative;
+            font-size: 16px;
+            font-style: italic;
+            color: white;
+            margin-bottom: 5px;
+            ;
+          }
+
+          .bookcategorie {
+            position: relative;
+            color: #CC6666;
+            margin-bottom: 100px
+          }
+
+          .booklink {
+            position: relative;
+
+            a {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+.bookcontainer {
+  text-align: center;
+}
+
+.bookalone {
+  margin-left: auto;
+  margin-right: auto;
+  p {
+    margin: 0;
+    margin-top: 10px;
+    color: white;
+  }
+
+  input {
+    color: rgba(0,0,0,0.65);
+    text-align: center;
+  }
+
+}
+
+.pagelink {
+  display: block;
+  text-align:center;
+  margin-top: 300px;
+  margin-bottom: 25px;
+
+
+  a {
+    position: relative;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid white;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
