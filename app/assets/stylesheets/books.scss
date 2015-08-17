@@ -155,6 +155,10 @@ body {
       }
     }
 
+    p {
+      margin-top: 100px;
+    }
+
   }
 
 }
@@ -196,4 +200,9 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.redcross {
+  color: rgba(90,0,0,0.8);
+  text-decoration-color: black;
 }

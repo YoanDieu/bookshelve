@@ -21,7 +21,7 @@
       <% @books.each do |book|%>
         <ul class="book<%=book.id%>">
           <%= form_tag "/books/#{book.id}", method: "delete" do %>
-            <input type="submit" value="x"/>
+            <input class="redcross" type="submit" value="X"/>
           <% end %>
           <div class="container">
             <li class="booktitle"><%= book.title %></li>
@@ -40,4 +40,5 @@
   <% else %>
     <p><strong>Désolé</strong> Aucun livre dans la bibliothèque pour l'instant</p>
   <% end %>
+  <p><a class="close" href="/"> < Retour à l'accueil </a></p>
 </main>
