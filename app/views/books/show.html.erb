@@ -11,12 +11,14 @@
     <div class="container">
       <%= form_tag "/books/#{@book.id}", method: "patch" do %>
         <p>Titre:</p>
-        <input type="text" name="title" placeholder="<%= @book.title %>" />
+        <input type="text" name="title" value="<%= @book.title %>" placeholder="<%= @book.title %>" />
+        <aside class="error"> <%= @book.errors[:title].first %></aside>
         <p>Sous-titre:</p>
-        <input type="text" name="sub_title" placeholder="<%= @book.sub_title %>" />
+        <input type="text" name="sub_title" value="<%= @book.sub_title %>" placeholder="<%= @book.sub_title %>" />
         <p>Auteur:</p>
-        <input type="text" name="author" placeholder="<%= @book.author %>"/>
-        <select name="category_id" placehorder="Catégories">
+        <input type="text" name="author" value="<%= @book.author %>"placeholder="<%= @book.author %>"/>
+        <aside class="error"> <%= @book.errors[:author].first %></aside>
+        <select name="category_id" placehorder="Catégories" value="<%= @book.category.name %>">
           <% @categories.each do |category| %>
             <option value="<%= category.id %>"> <%= category.name %> </option>
           <%end%>

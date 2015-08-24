@@ -1,8 +1,12 @@
 class Book < ActiveRecord::Base
   belongs_to :category
 
-  validates :title, :author, presence: {
+  validates :title, presence: {
     message: "Le titre doit être renseigné."
+  }
+
+  validates :author, presence: {
+    message: "L'Auteur doit être renseigné."
   }
 
   validates :title, uniqueness: {
