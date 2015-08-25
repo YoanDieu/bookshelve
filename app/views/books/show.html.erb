@@ -4,6 +4,7 @@
 
 
   <ul class="bookcontainer">
+
   <ul class="bookalone">
     <%= form_tag "/books/#{@book.id}", method: "delete" do %>
       <input type="submit" value="x"/>
@@ -26,6 +27,30 @@
         <p> Lu:<input type="checkbox" name="read" value="<%= @book.read %>"/></p>
         <input type="submit" value="Modifier le livre"/>
       <% end %>
+
+    <ul class="bookalone">
+      <%= form_tag "/books/#{@book.id}", method: "delete" do %>
+        <input type="submit" value="x"/>
+        <% end %>
+        <div class="container">
+          <%= form_tag "/books/#{@book.id}", method: "patch" do %>
+          <p>Titre:</p>
+          <input type="text" name="title" placeholder="<%= @book.title %>" />
+          <p>Sous-titre:</p>
+          <input type="text" name="sub_title" placeholder="<%= @book.sub_title %>" />
+          <p>Auteur:</p>
+          <input type="text" name="author" placeholder="<%= @book.author %>"/>
+          <p>Catégorie:</p>
+          <select name="category_id" placehorder="Catégories">
+            <% @categories.each do |category| %>
+              <option value="<%= category.id %>"> <%= category.name %> </option>
+              <%end%>
+          </select>
+          <p> Lu:<input type="checkbox" name="read" value="<%= @book.read %>"/></p>
+          <input type="submit" value="Modifier le livre"/>
+        <% end %>
+      </div>
+
     </ul>
   </ul>
 
