@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'users/home'
+
+  get 'users/login'
+
   root 'pages#home'
 
   get '/books' => 'books#index'
